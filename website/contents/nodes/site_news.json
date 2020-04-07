@@ -1,0 +1,10 @@
+{
+  "name": "news",
+  "title": "News",
+  "theme": "",
+  "subtitle": "Last publications",
+  "contents": [
+    "Citations, Publications, RSS"
+  ],
+  "children": []
+}

@@ -1,0 +1,6 @@
+{
+  "name": "admin_settings",
+  "text": " Settings",
+  "icon": "fa fa-cog",
+  "path": "/admin/"
+}

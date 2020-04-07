@@ -1,0 +1,21 @@
+<section class="jumbotron bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-2">
+                <img class="img-fluid" src="{{node.metas.image_url|e|e}}">
+            </div>
+            <div class="col-lg-8 col-md-10">
+                <h2 class="display-5 mb-4 text-justify">{{node.title}}</h2>
+                <p class="lead mb-6 text-justify">{{node.subtitle|md|safe}}</p>
+                <a class="btn btn-lg btn-primary mx-1" href="/user/">{{node.metas.more_label}}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mx-2 my-2">
+                {% for para in node.contents %}
+                <div class="text-left">{{para|md|safe}}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

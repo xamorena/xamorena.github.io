@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+
+{% block stylesheets %}
+{{ super() }}
+{% endblock %}
+
+{% block title%}{{ error.title }} {% endblock %}
+
+{% block site_drawer %}{% endblock %}
+
+{% block content %}
+<section class="container p-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-warning bg-warning text-white shadow">
+                <div class="d-flex flex-md-row text-center my-2">
+                    <span class="{{error.icon}}"></span>
+                    <h3 class="display-4 col text-center">{{ error.title }}&nbsp;<strong>({{ error.code }})</strong>
+                    </h3>
+                </div>
+                <h4 class="display-4">{{ error.type }}</h4>
+                <p>{{ error.message }}</p>
+                <hr/>
+                <div class="d-flex flex-md-row justify-content-center">
+                    <a class="btn btn-default text-white mx-1" href={{error.back_link}}/">{{ error.back_label }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+{{ super() }}
+{% endblock %}

@@ -1,0 +1,116 @@
+<nav class="navbar navbar-header navbar-expand-sm shadow">
+    <div class="container-fluid">
+        {% block navbar_buttons %}
+        {% endblock %}
+        {% block navbar_brand %}
+        {% set brand = cms_site_brand() %}
+        <a class="navbar-brand {{ 'active' if page.path == '/home'  else '' }}" href="/">
+            <i class="d-inline {{ brand.icon }}"></i>
+            <b>{{ brand.text }}</b>
+        </a>
+        {% endblock %}
+        <button class="navbar-toggler navbar-toggler-right border-0" data-target="#site_navbar" data-toggle="collapse"
+                type="button">
+            <span class="fa fa-bars fa-fw"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="site_navbar">
+            {% block navbar_main %}
+            {% set main_menu = cms_menu('main') %}
+            {% if main_menu is defined %}
+            <ul class="navbar-nav mr-auto">
+                {% for menu in main_menu.children %}
+                {% if menu is defined %}
+                {% set item = cms_link(menu.name) %}
+                {% if item is defined %}
+                <li class="nav-item text-center">
+                    {% if menu.children|length > 0 %}
+                    <a class="nav-link w-100 {{ 'active' if page.path == item.path  else '' }}"
+                       href="{{item.path|e|e}}" title="{{item.text|e|e}}">
+                        <span class="{{item.icon|e|e}}"></span>
+                        <span class="d-inline">{{item.text|e|e}}</span>
+                    </a>
+                    {% else %}
+                    <a class="nav-link w-100 {{ 'active' if page.path == item.path  else '' }}"
+                       href="{{item.path|e|e}}" title="{{item.text|e|e}}">
+                        <span class="{{item.icon|e|e}}"></span>
+                        <span class="d-inline">{{item.text|e|e}}</span>
+                    </a>
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endblock %}
+            <ul class="navbar-nav ml-auto">
+                {% block navbar_util %}
+                {% set util_menu = cms_menu('util') %}
+                {% if util_menu is defined %}
+                {% for menu in util_menu.children %}
+                {% if menu is defined %}
+                {% set item = cms_link(menu.name) %}
+                {% if item is defined %}
+                <li class="nav-item text-center">
+                    {% if menu.children|length > 0 %}
+                    <button aria-expanded="false" aria-haspopup="true"
+                            class="nav-link w-100 btn btn-primary header-btn"
+                            data-toggle="dropdown" title="{{item.text|e|e}}" type="button">
+                        <span class="{{item.icon|e|e}}"></span>
+                        <span class="d-sm-none d-md-inline">{{item.text|e|e}}</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right m-2 p-2">
+                        <ul class="nav flex-column text-black">
+                            {% for name in menu.children %}
+                            {% set menu_item = cms_link(name) %}
+                            <li class="nav-item">
+                                <a class="nav-link {{ 'active' if page.path == menu_item.path  else '' }} text-dark"
+                                   href="{{menu_item.path|e|e}}" title="{{menu_item.text|e|e}}">
+                                    <i class="{{menu_item.icon|e|e}}"></i>
+                                    <span class="d-inline">{{menu_item.text|e|e}}</span>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% else %}
+                    <a class="nav-link w-100 {{ 'active' if page.path == item.path  else '' }}"
+                       href="{{item.path|e|e}}" title="{{item.text|e|e}}">
+                        <span class="{{item.icon|e|e}}"></span>
+                        <span class="d-inline">{{item.text|e|e}}</span>
+                    </a>
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% endblock %}
+                {% block navbar_auth %}
+                {% if g.user %}
+                {% set item = cms_link('auth_logout_now') %}
+                <li class="nav-item text-center">
+                    <a class="nav-link btn btn-secondary header-btn w-100 {{ 'active' if page.path == item.path  else '' }}"
+                       href="{{item.path|e|e}}" title="{{item.text|e|e}}">
+                        <span class="{{item.icon|e|e}}"></span>
+                        <span class="d-sm-none d-md-inline">{{item.text|e|e}}</span>
+                    </a>
+                </li>
+                {% else %}
+                {% set item_colors = {'auth_login': 'secondary', 'auth_register': 'primary'} %}
+                {% for item_name in ['auth_login', 'auth_register'] %}
+                {% set item = cms_link(item_name) %}
+                <li class="nav-item text-center">
+                    <a class="nav-link btn btn-{{item_colors.get(item_name, 'default') }} header-btn w-100 {{ 'active' if page.path == item.path  else '' }}"
+                       href="{{item.path|e|e}}" title="{{item.text|e|e}}">
+                        <span class="{{item.icon|e|e}}"></span>
+                        <span class="d-sm-none d-md-inline">{{item.text|e|e}}</span>
+                    </a>
+                </li>
+                {% endfor %}
+                {% endif %}
+                {% endblock %}
+            </ul>
+        </div>
+    </div>
+</nav>

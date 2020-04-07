@@ -1,0 +1,9 @@
+{
+  "name": "auth_sign",
+  "template": "page",
+  "title": "Authentication",
+  "keywords": "VolBrain, Login",
+  "subtitle": "VolBrain Member Access",
+  "contents": [],
+  "children": []
+}

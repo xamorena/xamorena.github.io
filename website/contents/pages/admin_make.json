@@ -1,0 +1,12 @@
+{
+  "name": "admin_make",
+  "template": "admin/make.html",
+  "title": "Make VolBrain Platform Pipeline",
+  "keywords": "Administration",
+  "subtitle": "Make a new Docker image based on predefined container pipeline image",
+  "metas": {
+    "more_label": "More"
+  },
+  "contents": [],
+  "children": []
+}

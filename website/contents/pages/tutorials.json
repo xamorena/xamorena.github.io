@@ -1,0 +1,17 @@
+{
+  "name": "tutorials",
+  "template": "albums",
+  "keywords": "VolBrain Tutorials",
+  "title": "Our Tutorials",
+  "subtitle": "A collection of MRI brain volumetric guidelines",
+  "metas": {
+    "icon": "fa fa-life-ring",
+    "more_label": "More",
+    "image_url": "/static/img/banner.png"
+  },
+  "contents": [],
+  "children": [],
+  "nodes": [
+    "site_tutorials"
+  ]
+}

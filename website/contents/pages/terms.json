@@ -1,0 +1,15 @@
+{
+  "name": "terms",
+  "template": "articles",
+  "title": "Terms of Use",
+  "keywords": "Terms, ToS",
+  "subtitle": "",
+  "metas": {
+    "icon": "fa fa-handshake"
+  },
+  "contents": [],
+  "children": [],
+  "nodes": [
+    "site_terms"
+  ]
+}

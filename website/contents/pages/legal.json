@@ -1,0 +1,10 @@
+{
+  "name": "legal",
+  "template": "page",
+  "keywords": "",
+  "title": "Legal",
+  "subtitle": "",
+  "contents": [
+    "# TODO : add legal content\n- Legal 1\n- Legal 2\n- Legal 3\n\nJust a **demo**\n[Legal](/pages/legal)\n"
+  ]
+}

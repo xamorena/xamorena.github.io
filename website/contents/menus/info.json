@@ -1,0 +1,20 @@
+{
+  "name": "info",
+  "children": [
+    {
+      "name": "terms"
+    },
+    {
+      "name": "privacy"
+    },
+    {
+      "name": "tutorials"
+    },
+    {
+      "name": "teams"
+    },
+    {
+      "name": "help"
+    }
+  ]
+}

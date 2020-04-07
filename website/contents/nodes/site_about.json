@@ -1,0 +1,15 @@
+{
+  "name": "site_about",
+  "template": "content",
+  "title": "About",
+  "subtitle": "",
+  "keywords": "About volBrain",
+  "metas": {
+    "icon": "fa fa fa-info-circle fa-4x",
+    "more_label": "More"
+  },
+  "contents": [
+    "The volBrain pipeline has been developed by José V. Manjón (IBIME, UPV, Spain) and Pierrick Coupé (LaBRI UMR 5800, Bordeaux University, CNRS, France)."
+  ],
+  "children": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "user_upload",
+  "template": "user/upload.html",
+  "title": "MRI Submission",
+  "keywords": "Volbrain, Pipelines, Upload",
+  "subtitle": "A place where you can submit a MRI file to process",
+  "metas": {
+    "icon": "fa fa-file-upload",
+    "open_tutorials_label": "Open the tutorials for help",
+    "upload_limit_reached_label": "Sorry, but you reach the limit of maximum upload per day, try tomorrow ...",
+    "no_upload_limit_label": "Unlimited upload per day",
+    "upload_limit_label": "Upload limit per day:",
+    "upload_form_label": "MRI Job Submission",
+    "upload_select_label": "<i class=\"fa fa-stack\"><b class=\"far fa-circle fa-stack-2x\"></b><b class=\"fa-stack-1x\">1</b></i> First, **select** from our tools one of the **automated pipelines** that suits you",
+    "upload_custom_label": "<i class=\"fa fa-stack\"><b class=\"far fa-circle fa-stack-2x\"></b><b class=\"fa-stack-1x\">2</b></i> Then **select a valid MRI image file**, and fill-up mandatory and optional fields.\n\n- You **must choose** an **anonymized** and **compressed** (zip, tgz, nii.gz (no tar)) file containing a **single T1w NIfTI file**.",
+    "upload_uimode_label": "- You can display automated pipelines as ",
+    "upload_submit_label": "Submit now"
+  },
+  "contents": [],
+  "children": []
+}

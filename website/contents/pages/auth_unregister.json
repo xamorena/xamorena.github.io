@@ -1,0 +1,9 @@
+{
+  "name": "auth_unregister",
+  "template": "page",
+  "title": "User Profile Deletion",
+  "keywords": "VolBrain, Registration",
+  "subtitle": "VolBrain Member Account",
+  "contents": [],
+  "children": []
+}

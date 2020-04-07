@@ -1,0 +1,15 @@
+{
+  "name": "tutorials_hips",
+  "template": "articles",
+  "title": "hips Tutorial",
+  "keywords": "hips Tutorials",
+  "subtitle": "How to use hips pipeline, report",
+  "metas": {
+    "icon": "fa fa-life-ring fa-4x"
+  },
+  "contents": [],
+  "children": [],
+  "nodes": [
+    "site_tutorials_hips"
+  ]
+}

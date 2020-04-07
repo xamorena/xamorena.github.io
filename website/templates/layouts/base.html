@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="IE=9" http-equiv="X-UA-Compatible">
+    {% set seo = cms_site_seo() %}
+    <title>{% block title %}{{seo.title|e|e}} : {{page.title|e|e}}{% endblock %}</title>
+    <meta content="{{seo.robots|e|e}}" name="robots">
+    <meta content="{{ (seo.keywords, page.keywords) |e|e}}" name="keywords">
+    <meta content="{{seo.description|e|e}}" name="description">
+    <link href="{{seo.favicon|e|e}}" rel="shortcut icon" type="image/x-icon"/>
+    <link href="" rel="shortcut icon" type="image/x-icon"/>
+    {% block stylesheets %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link href="/static/css/base.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme_{{cms_theme()|e|e}}.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme.min.css" media="all" rel="stylesheet">
+    <style>
+    {{cms_site_styles()|safe}}
+    </style>
+    {% endblock %}
+</head>
+
+<body class="site-theme">
+
+{% block cookies_consent_banner %}
+{% include 'components/cookies_consent_banner.html' %}
+{% endblock %}
+
+<a class="skippy sr-only sr-only-focusable" href="#site_content">
+    <span class="skippy-text">Skip to content</span>
+</a>
+
+{% block page_header %}{% endblock %}
+
+{% block site_header %}
+<header class="site-header fixed-top">
+    {% block header %}
+    {% include 'components/navbar_header.html' %}
+    {% endblock %}
+</header>
+{% endblock %}
+
+{% block body %}
+<main class="site-content" id="site_content" role="main">
+    {% block site_alerts %}
+    {% include 'components/alerts.html' %}
+    {% endblock %}
+    {% block content %}{% endblock %}
+</main>
+{% endblock %}
+
+{% block site_footer %}
+<footer class="site-footer" role="contentinfo">
+    {% block footer %}
+    {% include 'components/navbar_footer.html' %}
+    {% endblock %}
+</footer>
+{% endblock %}
+
+{% block page_footer %}{% endblock %}
+
+{% block javascripts %}
+<script crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+{{cms_site_scripts()|safe}}
+
+</script>
+{% endblock %}
+
+</body>
+
+</html>

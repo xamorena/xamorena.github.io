@@ -1,0 +1,6 @@
+{
+  "name": "auth_logout",
+  "text": " Logout",
+  "icon": "fa fa-sign-out-alt",
+  "path": "/auth/logout"
+}

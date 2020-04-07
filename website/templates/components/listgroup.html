@@ -1,0 +1,28 @@
+<section class="container-fluid py-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="list-group py-4 d-flex flex-column">
+                {% for item in node.children %}
+                <div class="list-group-item d-flex flex-row">
+                    <div class="col-3">
+                        {% if 'metas' in item %}
+                        {% if 'category' in item.metas %}
+                        <div class="lead">{{item.metas.category|md|safe}}</div>
+                        {% endif %}
+                        {% if 'image_url' in item.metas %}
+                        <img class="img-fluid" src="{{item.metas.image_url|e|e}}">
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="col-9 d-flex flex-column">
+                        <h3>{{item.title}} : {{item.subtitle}}</h3>
+                        {% for para in item.contents %}
+                        <div class="mb-0 text-justify">{{para}}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

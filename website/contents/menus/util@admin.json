@@ -1,0 +1,18 @@
+{
+  "name": "util@admin",
+  "children": [
+    {
+      "name": "user_options",
+      "children": [
+        "admin_settings",
+        "separator",
+        "user_home",
+        "user_preview",
+        "user_profile",
+        "separator",
+        "members",
+        "news"
+      ]
+    }
+  ]
+}

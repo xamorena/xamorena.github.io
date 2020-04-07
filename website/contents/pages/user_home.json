@@ -1,0 +1,13 @@
+{
+  "name": "user_home",
+  "template": "user/home.html",
+  "theme": "",
+  "title": "Dashboard",
+  "keywords": "VolBrain User Dashboard",
+  "subtitle": "A place where you can manage your MRI files and reports.",
+  "metas": {
+    "icon": "fa fa-home"
+  },
+  "contents": [],
+  "children": []
+}

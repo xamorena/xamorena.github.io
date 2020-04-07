@@ -1,0 +1,22 @@
+{
+  "name": "localhost",
+  "hosts": "localhost, www.volbrain.net",
+  "product": "VolBrain Platform",
+  "version": "2.1.0",
+  "authors": "UPV - UB - CNRS - LaBRI",
+  "license": "Apache 2",
+  "seo": {
+    "title": "VolBrain",
+    "favicon": "/static/assets/img/favicon.ico",
+    "description": "volBrain an automated MRI brain volumetric system",
+    "keywords": "volBrain,MRI,brain",
+    "robots": "index,follow"
+  },
+  "brand": {
+    "text": "VolBrain",
+    "icon": "fa fa-brain",
+    "image": ""
+  },
+  "styles": "",
+  "scripts": ""
+}

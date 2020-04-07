@@ -1,0 +1,72 @@
+{
+  "theme": "shadow",
+  "name": "site_tutorials",
+  "title": "Our Tutorials",
+  "subtitle": "Collection of MRI brain volumetric computation services",
+  "template": "products",
+  "contents": [
+    ""
+  ],
+  "children": [
+    {
+      "name": "part1",
+      "theme": "shadow",
+      "title": "VolBrain Pipeline",
+      "subtitle": "volBrain is a pipeline of processes aimed to automatically analyze MRI brain data.",
+      "contents": [
+        "It works as a black box from the user point of view as it gets an anonymized MRI brain volume in **NIFTI format** and produces a **PDF report** with the volumes of the main IntraCranial Cavity (ICC) tissues (that is, CSF, GM and WM). It also provides volume information of some macroscopic areas such as brain hemispheres, cerebellum and brainstem. Finally, automatic subcortical structure segmentation is performed and related volumes and label maps are provided. The average processing time of the whole pipeline is around 12 minutes. However this time can vary depending on the number of jobs queued in our server. In the next figure a brief outline of the process is displayed."
+      ],
+      "metas": {
+        "category": "subcortical",
+        "image_url": "/static/assets/img/pipelines/volbrain/volbrain_pipeline.png",
+        "action_url": "/pages/tutorials/volbrain",
+        "action_key": "VolBrain Tutorial"
+      }
+    },
+    {
+      "name": "part2",
+      "theme": "shadow",
+      "title": "CERES Pipeline",
+      "subtitle": "Ceres is a pipeline to automatically analyze Cerebellum MRI brain data.",
+      "contents": [
+        "As for volBrain, it gets an anonymized MRI brain volume in **NIFTI format** and produces a **PDF report** with the volumes of the main cerebellum tissues (WM and GM) and the cerebellum lobules. It also provides cerebellar cortical thickness for each lobule. The average processing time of the whole pipeline is around 10 minutes. However this time can vary depending on the number of jobs queued in our server. In the next figure a brief outline of the process is displayed."
+      ],
+      "metas": {
+        "category": "cerebellum",
+        "image_url": "/static/assets/img/pipelines/ceres/ceres_pipeline.png",
+        "action_url": "/pages/tutorials/ceres",
+        "action_key": "Ceres Tutorial"
+      }
+    },
+    {
+      "name": "part3",
+      "theme": "shadow",
+      "title": "HIPS Pipeline",
+      "subtitle": "HIPS is a pipeline for automatic hippocampus subfield segmetnation from monomodal (T1) of multimodal MRI data (T1 + T2).",
+      "contents": [
+        "As for volBrain, it gets two anonymized MRI brain volumes in **NIFTI format** and produces a **PDF report** with the volumes of diferent subfields using two different delimitation protocols. The average processing time of the whole pipeline is around 20 minutes. However this time can vary depending on the number of jobs queued in our server. In the next figure a brief outline of the process is displayed."
+      ],
+      "metas": {
+        "category": "hippocampus",
+        "image_url": "/static/assets/img/pipelines/hips/hips_pipeline.png",
+        "action_url": "/pages/tutorials/hips",
+        "action_key": "HIPS Tutorial"
+      }
+    },
+    {
+      "name": "part4",
+      "theme": "shadow",
+      "title": "LesionBrain Pipeline",
+      "subtitle": "LesionBrain is a pipeline to automatically segment white matter lesions from MRI data(T1 + FLAIR).",
+      "contents": [
+        "As for volBrain, it gets two anonymized MRI brain volumes in **NIFTI format** and produces a **PDF report** with the volumes of the lesions and their locations The average processing time of the whole pipeline is around 20 minutes. However this time can vary depending on the number of jobs queued in our server. In the next figure a brief outline of the process is displayed. "
+      ],
+      "metas": {
+        "category": "lesions",
+        "image_url": "/static/assets/img/pipelines/lesionbrain/lesionbrain_pipeline.png",
+        "action_url": "/pages/tutorials/lesionbrain",
+        "action_key": "LesionBrain Tutorial"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "site_tutorials_hips",
+  "template": "products",
+  "title": "hips Tutorial",
+  "keywords": "hips Tutorials",
+  "subtitle": "How to use hips pipeline ...",
+  "metas": {
+    "more_label": "More",
+    "image_url": "/static/assets/img/pipelines/hips/hips_blue.jpg"
+  },
+  "contents": [
+    "..."
+  ],
+  "children": [
+    {
+      "name": "hips_pipeline",
+      "title": "HIPS Pipeline",
+      "subtitle": "HIPS Pipeline Description",
+      "contents": [
+        "hips Pipeline ..."
+      ],
+      "metas": {
+        "image_url": "/static/assets/img/pipelines/hips/hips_pipeline.png"
+      }
+    },
+    {
+      "name": "hips_report",
+      "title": "HIPS Report",
+      "subtitle": "HIPS Report Description",
+      "contents": [
+        "hips Report ..."
+      ],
+      "metas": {
+        "image_url": "/static/assets/img/pipelines/hips/hips_report.png"
+      }
+    },
+    {
+      "name": "hips_vieo",
+      "title": "HIPS Video",
+      "subtitle": "...",
+      "contents": [
+        "hips video ..."
+      ],
+      "metas": {
+        "image_url": "/static/assets/img/pipelines/hips/hips_blue_invert.jpg"
+      }
+    },
+    {
+      "name": "hips_trial",
+      "title": "HIPS trial",
+      "subtitle": "...",
+      "contents": [
+        "Test our HIPS pipeline now ..."
+      ],
+      "metas": {
+        "action_url": "/user/upload?pn=hips",
+        "action_key": "Try Now"
+      }
+    }
+  ]
+}

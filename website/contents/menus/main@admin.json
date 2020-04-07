@@ -1,0 +1,17 @@
+{
+  "name": "main@admin",
+  "children": [
+    {
+      "name": "services"
+    },
+    {
+      "name": "user_upload"
+    },
+    {
+      "name": "user_download"
+    },
+    {
+      "name": "about"
+    }
+  ]
+}

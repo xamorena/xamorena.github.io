@@ -1,0 +1,6 @@
+{
+  "name": "auth_register",
+  "text": "Register",
+  "icon": "fa fa-user-plus",
+  "path": "/auth/register"
+}

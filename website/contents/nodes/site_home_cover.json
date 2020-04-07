@@ -1,0 +1,15 @@
+{
+  "name": "site_home_cover",
+  "theme": "shadow",
+  "template": "cover",
+  "title": "volBrain is an online MRI brain volumetric system. It is intended to help researchers all over the world to obtain automatically volumetric brain information from their MRI data without the need for any infrastructure in their local sites.",
+  "subtitle": "volBrain works in a fully automatic manner and is able to provide brain structure volumes without any human interaction. We encourage you to use the system hoping you find it useful.The **number of cases each user can submit daily** is **limited to 10 cases** in order to share our limited computational resources between all users.",
+  "contents": [
+    "This evaluation version of volBrain is **free** for **non-commercial** and **non-medical** purposes. Please contact [jmanjon@fis.upv.es](jmanjon@fis.upv.es) or [pierrick.coupe@labri.fr](pierrick.coupe@labri.fr) for processing large amount of data. We are looking for collaboration to evaluate and improve our platform, please contact us with any feedback."
+  ],
+  "metas": {
+    "more_label": "More",
+    "image_url": "/static/assets/img/covers/home_cover.jpg"
+  },
+  "children": []
+}

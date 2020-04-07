@@ -1,0 +1,10 @@
+{
+  "name": "keys",
+  "template": "keys",
+  "title": "Crypto Demo",
+  "subtitle": "Flask base: core : ok",
+  "keywords": "",
+  "contents": [
+    "# Enjoy\n- An simple example\n- With markdown"
+  ]
+}

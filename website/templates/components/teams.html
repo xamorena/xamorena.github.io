@@ -1,0 +1,32 @@
+{% include "components/content.html" %}
+<section class="container-fluid py-5">
+    <div class="row">
+        {% for item in node.children %}
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-contact p-2 m-2" id="{{item.name}}">
+                <div class="card-body text-center">
+                    {% if 'metas' in item %}
+                    {% if 'category' in item.metas %}
+                    {{item.metas.category|md|safe}}
+                    {% endif %}
+                    {% if 'image_url' in item.metas %}
+                    <p><img alt="card image" class="img-avatar img-fluid" src="{{item.metas.image_url}}"></p>
+                    {% endif %}
+                    {% endif %}
+                    {% if 'title' in item %}<h4 class="card-title">{{item.title}}</h4>{% endif %}
+                    {% if 'subtitle' in item %}
+                    <div class="lead">{{item.subtitle|md|safe}}</div>
+                    {% endif %}
+                    {% if 'contents' in item %}
+                    <div class="card-text">
+                        {% for para in item.contents %}
+                        <div class="text-center mb-0">{{para|md|safe}}</div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

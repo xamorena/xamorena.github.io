@@ -1,0 +1,6 @@
+{
+  "name": "help",
+  "text": " Help",
+  "icon": "fa fa-question-circle",
+  "path": "/pages/help"
+}

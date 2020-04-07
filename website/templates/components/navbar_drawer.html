@@ -1,0 +1,22 @@
+<nav class="side-menu">
+    {% if menus['side'] is defined %}
+    <ul class="nav flex-column">
+        {% for menu in menus['side'] %}
+        {% set item = links[menu.name] %}
+        <li class="nav-item">
+            {% if menu.children|length > 0 %}
+            <a class="nav-link {{ 'active' if page.path == item.path  else '' }}" href="{{item.link|e|e}}">
+                <span class="{{item.icon|e|e}}"></span>
+                {{item.text|e|e}}
+            </a>
+            {% else %}
+            <a class="nav-link {{ 'active' if page.path == item.path  else '' }}" href="{{item.link|e|e}}">
+                <span class="{{item.icon|e|e}}"></span>
+                {{item.text|e|e}}
+            </a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</nav>

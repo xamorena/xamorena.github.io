@@ -1,0 +1,12 @@
+{
+  "name": "user_preview",
+  "template": "user/preview.html",
+  "title": "MRI Files Preview",
+  "keywords": "VolBrain User PReview",
+  "subtitle": "A place where you can preview your MRI files ...",
+  "metas": {
+    "icon": "fa fa-vector-square"
+  },
+  "contents": [],
+  "children": []
+}

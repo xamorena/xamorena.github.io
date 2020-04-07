@@ -1,0 +1,17 @@
+{
+  "name": "services",
+  "template": "products",
+  "keywords": "VolBrain Pipelines,Ceres,HIPS,volBrain,lesionBrain",
+  "metas": {
+    "icon": "fa fa-tasks",
+    "image_url": "/static/assets/img/services.png",
+    "more_label": "Tutorials"
+  },
+  "title": "Tools and Automated Pipelines Services",
+  "subtitle": "Our collection of **MRI brain volumetric automated pipelines** based on **machine learning** analysis.",
+  "contents": [],
+  "children": [],
+  "nodes": [
+    "site_services"
+  ]
+}
