@@ -7,7 +7,7 @@
     <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta content="IE=9" http-equiv="X-UA-Compatible">
-    {% set seo = cms_site_seo() %}
+    {% set seo = site.get('seo') %}
     <title>{% block title %}{{seo.title|e|e}} : {{page.title|e|e}}{% endblock %}</title>
     <meta content="{{seo.robots|e|e}}" name="robots">
     <meta content="{{ (seo.keywords, page.keywords) |e|e}}" name="keywords">
@@ -19,10 +19,10 @@
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
     <link href="/static/css/base.min.css" media="all" rel="stylesheet">
-    <link href="/static/css/theme_{{cms_theme()|e|e}}.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme_{{g.theme|e|e}}.min.css" media="all" rel="stylesheet">
     <link href="/static/css/theme.min.css" media="all" rel="stylesheet">
     <style>
-    {{cms_site_styles()|safe}}
+    {{site.get('styles')|safe}}
     </style>
     {% endblock %}
 </head>
@@ -40,7 +40,7 @@
 {% block page_header %}{% endblock %}
 
 {% block site_header %}
-<header class="site-header fixed-top">
+<header class="site-header">
     {% block header %}
     {% include 'components/navbar_header.html' %}
     {% endblock %}
@@ -77,7 +77,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-{{cms_site_scripts()|safe}}
+{{site.get('scripts')|safe}}
 
 </script>
 {% endblock %}

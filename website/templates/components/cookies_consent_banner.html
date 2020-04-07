@@ -7,21 +7,21 @@
         <div class="row">
             <div class="col-12 p-0">
                 <div class="alert alert-consent m-0" style="border-radius: 0px">
-                    <h4 class="alert-heading">{{ cms_meta('cookies_consent_title') }}</h4>
-                    <p class="text-justify">{{ cms_meta('cookies_consent_description')|md|safe }}</p>
-                    <p class="mb-0 text-justify">{{ cms_meta('cookies_consent_agreements') }}</p>
+                    <h4 class="alert-heading">{{ site.metas.get('cookies_consent_title') }}</h4>
+                    <p class="text-justify">{{ site.metas.get('cookies_consent_description')|md|safe }}</p>
+                    <p class="mb-0 text-justify">{{ site.metas.get('cookies_consent_agreements') }}</p>
                     <div class="row justify-content-between m-2">
                         <button class="btn btn-success"
-                                id="cookie-consent-agree">{{ cms_meta('cookies_consent_agree_label') }}
+                                id="cookie-consent-agree">{{ site.metas.get('cookies_consent_agree_label') }}
                         </button>
                         <span>&nbsp;</span>
                         <button class="btn btn-danger"
-                                id="cookie-consent-reject">{{ cms_meta('cookies_consent_reject_label') }}
+                                id="cookie-consent-reject">{{ site.metas.get('cookies_consent_reject_label') }}
                         </button>
                         <span>&nbsp;</span>
                         <a class="btn btn-warning ml-auto"
-                           href="{{cms_meta('cookies_consent_options_link')}}" id="cookie-consent-options">
-                            {{cms_meta('cookies_consent_options_label')}}
+                           href="{{site.metas.get('cookies_consent_options_link')}}" id="cookie-consent-options">
+                            {{site.metas.get('cookies_consent_options_label')}}
                         </a>
                     </div>
                 </div>

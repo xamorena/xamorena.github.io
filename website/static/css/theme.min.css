@@ -1,17 +1,21 @@
 .navbar.navbar-header {
+    /*
     background-color: none !important;
-    background-image: url('/static/assets/img/samples/header_bg.png') !important;
+    background-image: url('static/assets/img/samples/header_bg.png') !important;
     background-repeat-x: repeat;
     background-repeat-y: no-repeat;
     background-size: contain;
     color: var(--white);
+    */
+    background-color: var(--white) !important;
+    color: var(--primary) !important;
     border-bottom: 2px solid var(--primary);
 }
 
 .navbar .navbar-brand {
-    color: var(--white);
+    color: var(--primary);
 }
 
 .navbar .nav-link {
-    color: var(--white);
+    color: var(--primary);
 }

@@ -14,9 +14,6 @@ from .config import SESSION_TIMEOUT
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
-    from .cms2 import CMS
-    _cms = CMS()
-    _cms.init_app(app)
     from .site import site_bp
     app.register_blueprint(site_bp)
 
@@ -25,18 +22,15 @@ def create_app():
         if not session.permanent:
             session.permanent = True
             app.permanent_session_lifetime = datetime.timedelta(minutes=SESSION_TIMEOUT)
-        theme = request.args.get("theme", session.get("theme", "default"))
-        cm = current_app.cms.get_content_manager()
-        if theme != cm.get_theme():
-            cm.set_theme(theme)
+        g.theme = request.args.get("theme", session.get("theme", "default"))
+        session['theme'] = g.theme
         g.user = None
-        g.theme = cm.get_theme()
         if request.headers.get('X-Forwarded-For', None) is not None:
             g.forwarders = str(request.headers.get('X-Forwarded-For')).split(',')
             g.remote_addr = g.forwarders[:1]
         else:
             g.remote_addr = request.remote_addr
-        g.web_host = request.headers.get('Host', cm.host)
+        g.web_host = request.headers.get('Host', 'localhost')
         g.user_agent = request.headers.get('User-Agent', '')
         g.accept_language = request.headers.get('Accept-Language', '')
         g.lang = g.accept_language

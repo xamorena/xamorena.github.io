@@ -1,6 +1,0 @@
-{
-  "name": "auth_logout_now",
-  "text": " Logout",
-  "icon": "fa fa-sign-out-alt",
-  "path": "/auth/logout/now"
-}

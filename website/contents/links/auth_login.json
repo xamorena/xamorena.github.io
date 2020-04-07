@@ -1,6 +1,0 @@
-{
-  "name": "auth_login",
-  "text": " Login",
-  "icon": "fa fa-sign-in-alt",
-  "path": "/auth/login"
-}

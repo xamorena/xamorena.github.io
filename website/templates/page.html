@@ -7,12 +7,7 @@
 {% block site_drawer %}{% endblock %}
 
 {% block content %}
-{% include 'components/title.html' %}
-{% if page.nodes is defined %}
-{% include "components/nodes.html" %}
-{% else %}
 {% include "components/page.html" %}
-{% endif %}
 {% endblock %}
 
 {% block javascripts %}

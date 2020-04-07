@@ -2,12 +2,12 @@
     {% block navbar_info %}
     <div class="row">
         <nav class="col-12">
-            {% set info_menu = cms_menu('info') %}
+            {% set info_menu = site.menus.get('info') %}
             {% if info_menu is defined %}
             <ul class="nav nav-pills nav-fill">
                 {% for menu in info_menu.children %}
                 {% if menu is defined %}
-                {% set item = cms_link(menu.name) %}
+                {% set item = site.links.get(menu.name) %}
                 {% if item is defined %}
                 <li class="nav-item">
                     <a class="nav-link {{ 'active' if page.path == item.path  else '' }} text-white"
@@ -25,7 +25,6 @@
     </div>
     {% endblock %}
     {% block navbar_prod %}
-    {% set site = cms_site() %}
     <div class="row">
         <div class="col-sm-12 d-flex justify-content-between text-center">
             <div class="mr-auto text-md-left m-2">
@@ -50,6 +49,5 @@
             </center>
         </div>
     </div>
-</div>
 {% endblock %}
 </div>

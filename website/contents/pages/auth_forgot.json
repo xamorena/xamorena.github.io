@@ -1,9 +1,0 @@
-{
-  "name": "auth_forgot",
-  "template": "auth/forgot.html",
-  "title": "Password Forgot",
-  "keywords": "VolBrain,Reset",
-  "subtitle": "We need to send an e-mail confirmation first ...",
-  "contents": [],
-  "children": []
-}

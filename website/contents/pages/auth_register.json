@@ -1,9 +1,0 @@
-{
-  "name": "auth_register",
-  "template": "auth/register.html",
-  "title": "Registration",
-  "keywords": "VolBrain, Registration",
-  "subtitle": "VolBrain Member Account",
-  "contents": [],
-  "children": []
-}

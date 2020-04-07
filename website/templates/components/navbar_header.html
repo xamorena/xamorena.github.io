@@ -3,7 +3,7 @@
         {% block navbar_buttons %}
         {% endblock %}
         {% block navbar_brand %}
-        {% set brand = cms_site_brand() %}
+        {% set brand = site.brand %}
         <a class="navbar-brand {{ 'active' if page.path == '/home'  else '' }}" href="/">
             <i class="d-inline {{ brand.icon }}"></i>
             <b>{{ brand.text }}</b>
@@ -15,12 +15,12 @@
         </button>
         <div class="navbar-collapse collapse" id="site_navbar">
             {% block navbar_main %}
-            {% set main_menu = cms_menu('main') %}
+            {% set main_menu = site.menus.get('main') %}
             {% if main_menu is defined %}
             <ul class="navbar-nav mr-auto">
                 {% for menu in main_menu.children %}
                 {% if menu is defined %}
-                {% set item = cms_link(menu.name) %}
+                {% set item = site.links.get(menu.name) %}
                 {% if item is defined %}
                 <li class="nav-item text-center">
                     {% if menu.children|length > 0 %}
@@ -45,11 +45,11 @@
             {% endblock %}
             <ul class="navbar-nav ml-auto">
                 {% block navbar_util %}
-                {% set util_menu = cms_menu('util') %}
+                {% set util_menu = site.menus.get('util') %}
                 {% if util_menu is defined %}
                 {% for menu in util_menu.children %}
                 {% if menu is defined %}
-                {% set item = cms_link(menu.name) %}
+                {% set item = site.links.get(menu.name) %}
                 {% if item is defined %}
                 <li class="nav-item text-center">
                     {% if menu.children|length > 0 %}
@@ -62,7 +62,7 @@
                     <div class="dropdown-menu dropdown-menu-right m-2 p-2">
                         <ul class="nav flex-column text-black">
                             {% for name in menu.children %}
-                            {% set menu_item = cms_link(name) %}
+                            {% set menu_item = site.links.get(name) %}
                             <li class="nav-item">
                                 <a class="nav-link {{ 'active' if page.path == menu_item.path  else '' }} text-dark"
                                    href="{{menu_item.path|e|e}}" title="{{menu_item.text|e|e}}">
@@ -88,7 +88,7 @@
                 {% endblock %}
                 {% block navbar_auth %}
                 {% if g.user %}
-                {% set item = cms_link('auth_logout_now') %}
+                {% set item = site.links.get('auth_logout_now') %}
                 <li class="nav-item text-center">
                     <a class="nav-link btn btn-secondary header-btn w-100 {{ 'active' if page.path == item.path  else '' }}"
                        href="{{item.path|e|e}}" title="{{item.text|e|e}}">
@@ -99,7 +99,7 @@
                 {% else %}
                 {% set item_colors = {'auth_login': 'secondary', 'auth_register': 'primary'} %}
                 {% for item_name in ['auth_login', 'auth_register'] %}
-                {% set item = cms_link(item_name) %}
+                {% set item = site.links.get(item_name) %}
                 <li class="nav-item text-center">
                     <a class="nav-link btn btn-{{item_colors.get(item_name, 'default') }} header-btn w-100 {{ 'active' if page.path == item.path  else '' }}"
                        href="{{item.path|e|e}}" title="{{item.text|e|e}}">

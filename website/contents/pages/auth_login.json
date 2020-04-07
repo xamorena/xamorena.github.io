@@ -1,8 +1,0 @@
-{
-  "name": "auth_login",
-  "template": "auth/sign.html",
-  "title": "Authentication",
-  "subtitle": "VolBrain Member Access",
-  "keywords": "VolBrain, Login",
-  "contents": []
-}

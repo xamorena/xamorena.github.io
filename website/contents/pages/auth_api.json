@@ -1,9 +1,0 @@
-{
-  "name": "auth_api",
-  "template": "auth/api.html",
-  "title": "API version 1.0",
-  "keywords": "VolBrain, API",
-  "subtitle": "VolBrain API Access",
-  "contents": [],
-  "children": []
-}

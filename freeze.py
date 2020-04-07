@@ -10,12 +10,12 @@ if __name__ == '__main__':
 
     @freezer.register_generator
     def site_topic():
-        for topic in ['help', 'services', 'about', 'terms', 'privacy', 'teams']:
+        for topic in ['help', 'about', 'terms', 'privacy']:
             yield "site.site_topic", {'topic': topic}
 
     @freezer.register_generator
     def site_topic_page():
-        for page in ['volbrain']:
+        for page in ['webrtc']:
             yield "site.site_topic_page", {'topic': 'tutorials', 'name': page}
 
     freezer.freeze()
