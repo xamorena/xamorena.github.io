@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="IE=9" http-equiv="X-UA-Compatible">
+    
+    <title>VolBrain : Home</title>
+    <meta content="index,follow" name="robots">
+    <meta content="(&#39;volBrain,MRI,brain&#39;, &#39;News&#39;)" name="keywords">
+    <meta content="volBrain an automated MRI brain volumetric system" name="description">
+    <link href="/static/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="" rel="shortcut icon" type="image/x-icon"/>
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link href="/static/css/base.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme_default.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme.min.css" media="all" rel="stylesheet">
+    <style>
+    
+    </style>
+    
+
+</head>
+
+<body class="site-theme">
+
+
+
+
+<div id="cookie-consent-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="alert alert-consent m-0" style="border-radius: 0px">
+                    <h4 class="alert-heading">Cookies consent agreement</h4>
+                    <p class="text-justify"><p>This website uses cookies to improve your end user experience, to keep your session alive and for analytics.</p></p>
+                    <p class="mb-0 text-justify">By clicking &#39;I agree&#39;, you consent to store cookies on your device.</p>
+                    <div class="row justify-content-between m-2">
+                        <button class="btn btn-success"
+                                id="cookie-consent-agree">I agree
+                        </button>
+                        <span>&nbsp;</span>
+                        <button class="btn btn-danger"
+                                id="cookie-consent-reject">No thanks, I do not agree
+                        </button>
+                        <span>&nbsp;</span>
+                        <a class="btn btn-warning ml-auto"
+                           href="/pages/privacy" id="cookie-consent-options">
+                            Learn More (Privacy)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var fn1 = function () {
+        document.cookie = "cookie_consent=true";
+        document.getElementById('cookie-consent-container').hidden = true;
+    };
+    document.getElementById('cookie-consent-agree').onclick = fn1;
+
+    var fn2 = function () {
+        document.cookie = "cookie_consent=false";
+        document.getElementById('cookie-consent-container').hidden = true;
+    };
+    document.getElementById('cookie-consent-reject').onclick = fn2;
+
+
+</script>
+
+
+
+<a class="skippy sr-only sr-only-focusable" href="#site_content">
+    <span class="skippy-text">Skip to content</span>
+</a>
+
+
+
+
+<header class="site-header fixed-top">
+    
+    <nav class="navbar navbar-header navbar-expand-sm shadow">
+    <div class="container-fluid">
+        
+        
+        
+        
+        <a class="navbar-brand active" href="/">
+            <i class="d-inline fa fa-brain"></i>
+            <b>VolBrain</b>
+        </a>
+        
+        <button class="navbar-toggler navbar-toggler-right border-0" data-target="#site_navbar" data-toggle="collapse"
+                type="button">
+            <span class="fa fa-bars fa-fw"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="site_navbar">
+            
+            
+            
+            <ul class="navbar-nav mr-auto">
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    
+                    <a class="nav-link w-100 "
+                       href="/pages/services" title=" Tools">
+                        <span class="fa fa-tasks"></span>
+                        <span class="d-inline"> Tools</span>
+                    </a>
+                    
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    
+                    <a class="nav-link w-100 "
+                       href="/members" title=" Users">
+                        <span class="fa fa-globe"></span>
+                        <span class="d-inline"> Users</span>
+                    </a>
+                    
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    
+                    <a class="nav-link w-100 "
+                       href="/citations" title=" News">
+                        <span class="fa fa-newspaper"></span>
+                        <span class="d-inline"> News</span>
+                    </a>
+                    
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    
+                    <a class="nav-link w-100 "
+                       href="/pages/about" title=" About">
+                        <span class="fa fa-info-circle"></span>
+                        <span class="d-inline"> About</span>
+                    </a>
+                    
+                </li>
+                
+                
+                
+            </ul>
+            
+            
+            <ul class="navbar-nav ml-auto">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    <a class="nav-link btn btn-secondary header-btn w-100 "
+                       href="/auth/login" title=" Login">
+                        <span class="fa fa-sign-in-alt"></span>
+                        <span class="d-sm-none d-md-inline"> Login</span>
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item text-center">
+                    <a class="nav-link btn btn-primary header-btn w-100 "
+                       href="/auth/register" title="Register">
+                        <span class="fa fa-user-plus"></span>
+                        <span class="d-sm-none d-md-inline">Register</span>
+                    </a>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+</header>
+
+
+
+<main class="site-content" id="site_content" role="main">
+    
+    <section class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <br/>
+            
+            
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+
+
+
+
+<section class="jumbotron bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-2">
+                <img class="img-fluid" src="/static/assets/img/covers/home_cover.jpg">
+            </div>
+            <div class="col-lg-8 col-md-10">
+                <h2 class="display-5 mb-4 text-justify">volBrain is an online MRI brain volumetric system. It is intended to help researchers all over the world to obtain automatically volumetric brain information from their MRI data without the need for any infrastructure in their local sites.</h2>
+                <p class="lead mb-6 text-justify"><p>volBrain works in a fully automatic manner and is able to provide brain structure volumes without any human interaction. We encourage you to use the system hoping you find it useful.The <strong>number of cases each user can submit daily</strong> is <strong>limited to 10 cases</strong> in order to share our limited computational resources between all users.</p></p>
+                <a class="btn btn-lg btn-primary mx-1" href="/user/">More</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mx-2 my-2">
+                
+                <div class="text-left"><p>This evaluation version of volBrain is <strong>free</strong> for <strong>non-commercial</strong> and <strong>non-medical</strong> purposes. Please contact <a href="jmanjon@fis.upv.es">jmanjon@fis.upv.es</a> or <a href="pierrick.coupe@labri.fr">pierrick.coupe@labri.fr</a> for processing large amount of data. We are looking for collaboration to evaluate and improve our platform, please contact us with any feedback.</p></div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="container-fluid py-5">
+    <div class="row d-flex flex-wrap">
+        
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card  text-center p-2 m-2">
+                <h2></h2>
+                <h3>VolBrain</h3>
+                
+                
+                
+                <img class="img-fluid d-block" src="/static/assets/img/pipelines/volbrain/volbrain_blue.jpg">
+                
+                
+                <h5>VolBrain Tutorial</h5>
+                
+                <div class="text-justify"><p>volBrain is a pipeline of processes aimed to automatically analyze MRI brain data.</p></div>
+                
+                
+                
+                <div class="text-right">
+                    <a class="btn btn-primary" href="/pages/tutorials/volbrain">Read More ...</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card  text-center p-2 m-2">
+                <h2></h2>
+                <h3>CERES</h3>
+                
+                
+                
+                <img class="img-fluid d-block" src="/static/assets/img/pipelines/ceres/ceres_blue.jpg">
+                
+                
+                <h5>CERES Tutorial</h5>
+                
+                <div class="text-justify"><p>Ceres is a pipeline to automatically analyze Cerebellum MRI brain data.</p></div>
+                
+                
+                
+                <div class="text-right">
+                    <a class="btn btn-primary" href="/pages/tutorials/ceres">Read More ...</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card  text-center p-2 m-2">
+                <h2></h2>
+                <h3>HIPS</h3>
+                
+                
+                
+                <img class="img-fluid d-block" src="/static/assets/img/pipelines/hips/hips_blue.jpg">
+                
+                
+                <h5>HIPS Tutorial</h5>
+                
+                <div class="text-justify"><p>HIPS is a pipeline for automatic hippocampus subfield segmetnation from monomodal (T1) of multimodal MRI data (T1 + T2).</p></div>
+                
+                
+                
+                <div class="text-right">
+                    <a class="btn btn-primary" href="/pages/tutorials/hips">Read More ...</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card  text-center p-2 m-2">
+                <h2></h2>
+                <h3>LesionBrain</h3>
+                
+                
+                
+                <img class="img-fluid d-block" src="/static/assets/img/pipelines/lesionbrain/lesionbrain_blue.jpg">
+                
+                
+                <h5>LesionBrain Tutorial</h5>
+                
+                <div class="text-justify"><p>LesionBrain is a pipeline to automatically segment white matter lesions from MRI data(T1 + FLAIR).</p></div>
+                
+                
+                
+                <div class="text-right">
+                    <a class="btn btn-primary" href="/pages/tutorials/lesionbrain">Read More ...</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="container-fluid py-5 text-center">
+    <div class="row d-flex flex-md-row">
+        
+        <div class="col-xl-3 col-md-6 col-sm-12 p-4">
+            
+            
+            <img alt="image" class="img-fluid m-4"
+                 src="/static/assets/img/sponsors/upv.png">
+            
+            
+        </div>
+        
+        <div class="col-xl-3 col-md-6 col-sm-12 p-4">
+            
+            
+            <img alt="image" class="img-fluid m-4"
+                 src="/static/assets/img/sponsors/ub.png">
+            
+            
+        </div>
+        
+        <div class="col-xl-3 col-md-6 col-sm-12 p-4">
+            
+            
+            <img alt="image" class="img-fluid m-4"
+                 src="/static/assets/img/sponsors/labri.png">
+            
+            
+        </div>
+        
+        <div class="col-xl-3 col-md-6 col-sm-12 p-4">
+            
+            
+            <img alt="image" class="img-fluid m-4"
+                 src="/static/assets/img/sponsors/cnrs.png">
+            
+            
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+</main>
+
+
+
+<footer class="site-footer" role="contentinfo">
+    
+    <div class="container-fluid py-4 navbar-footer">
+    
+    <div class="row">
+        <nav class="col-12">
+            
+            
+            <ul class="nav nav-pills nav-fill">
+                
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link  text-white"
+                       href="/pages/terms">
+                        <span class="fa fa-handshake"></span>
+                         Terms
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link  text-white"
+                       href="/pages/privacy">
+                        <span class="fa fa-user-shield"></span>
+                         Privacy
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link  text-white"
+                       href="/pages/tutorials">
+                        <span class="fa fa-life-ring"></span>
+                         Tutorials
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link  text-white"
+                       href="/pages/teams">
+                        <span class="fa fa-users"></span>
+                         Teams
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link  text-white"
+                       href="/pages/help">
+                        <span class="fa fa-question-circle"></span>
+                         Help
+                    </a>
+                </li>
+                
+                
+                
+                
+            </ul>
+        </nav>
+    </div>
+    
+    
+    
+    <div class="row">
+        <div class="col-sm-12 d-flex justify-content-between text-center">
+            <div class="mr-auto text-md-left m-2">
+                
+                <h6>VolBrain Platform&nbsp;2.1.0</h6>
+                
+            </div>
+            <div class="ml-auto text-md-right m-2">
+                
+                <h6>2011-2020&nbsp;&copy;&nbsp;UPV - UB - CNRS - LaBRI&nbsp;</h6>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <center>
+                <small>https://localhost:5000 licensed under Apache 2</small>
+            </center>
+            <center>
+                <small>Client : 127.0.0.1, Language : </small>
+            </center>
+        </div>
+    </div>
+</div>
+
+</div>
+    
+</footer>
+
+
+
+
+
+
+<script crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+
+
+</script>
+
+
+
+</body>
+
+</html>
