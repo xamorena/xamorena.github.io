@@ -1,0 +1,237 @@
+html {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: -moz-hidden-unscrollable;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+.site-theme {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0;
+  padding: 0;
+}
+
+#cookie-consent-container {
+  width: 100%;
+}
+
+#content,
+.site-content {
+  width: 100%;
+  min-height: 80vh !important;
+  /*
+  display: flex;
+  flex-direction: column;
+  */
+}
+
+.site-header {
+  width: 100%;
+}
+
+.site-drawer {
+  display: flex;
+  overflow: hidden;
+}
+
+.site-content {
+    /*margin-top: 64px !important;*/
+}
+
+.site-footer {
+  width: 100%;
+  bottom: 0px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.drawer-container {
+  display: flex !important;
+  flex-direction: row !important;
+  min-height: 80vh;
+}
+
+.drawer {
+  display: flex !important;
+  overflow: hidden;
+}
+
+.drawer-size-sm {
+  width: 46px;
+  max-width: 46px;
+  min-width: 46px;
+  height: auto;
+}
+
+.drawer-size-sm>.menu-collapse {
+  display: none !important;
+}
+
+.drawer-size-md {
+  width: 220px !important;
+  max-width: 220px !important;
+  min-width: 220px !important;
+  height: auto;
+}
+
+.drawer-size-lg {
+  width: 320px !important;
+  max-width: 320px !important;
+  min-width: 320px !important;
+  height: auto;
+}
+
+#admin_tabs a.nav-link {
+  border-radius: 0px !important;
+  color: white;
+}
+
+#admin_tabs a.nav-link.active {
+  border-radius: 0px !important;
+  color: black;
+}
+
+.circle {
+  border-radius: 50% !important;
+  display: table-cell !important;
+  background-color: transparent;
+  border: 2px solid #5072b5 !important;
+}
+
+hr.vertical-line {
+  height: 50px !important;
+  width: 0px !important;
+  border: 2px solid #5072b5 !important;
+}
+
+.table-expandable {
+  width: 100% !important;
+}
+
+.bg-error {
+  background-image: url("/static/img/help/error.png");
+  min-height: 512px !important;
+  min-width: 512px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.dropdown-toggle {
+    white-space: normal !important;
+}
+
+.alert-consent {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.navbar-header {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.navbar-header .navbar-brand,
+.navbar-header .nav-link {
+    color: var(--light);
+}
+
+.navbar-header .navbar-brand.active,
+.navbar-header .nav-link.active {
+    color: var(--white);
+}
+
+.navbar-toggler {
+    color: var(--white);
+}
+
+.navbar-footer {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.navbar-footer .nav-pills .nav-link {
+    background-color: transparent !important;
+    color: var(--light);
+}
+
+.navbar-footer .nav-pills .nav-link.active {
+    background-color: transparent !important;
+    color: var(--white) !important;
+}
+
+.card:hover {
+    margin: 5px;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.15) !important;
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.gauge {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.stroke-primary {
+  stroke: var(--primary);
+}
+
+.stroke-secondary {
+  stroke: var(--secondary);
+}
+
+.stroke-success {
+  stroke: var(--success);
+}
+
+.stroke-info {
+  stroke: var(--info);
+}
+
+.stroke-danger {
+  stroke: var(--danger);
+}
+
+.stroke-warning {
+  stroke: var(--warning);
+}
+
+.dropdown-menu {
+    background-color: var(--light);
+    opacity: 80%;
+}
+
+.card-contact .card-title {
+    color: var(--primary);
+}
+
+.card-contact .card-body img.img-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    opacity: 60%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--dark);
+}

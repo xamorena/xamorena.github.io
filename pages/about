@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="IE=9" http-equiv="X-UA-Compatible">
+    
+    <title>XAM : </title>
+    <meta content="" name="robots">
+    <meta content="(&#39;&#39;, Undefined)" name="keywords">
+    <meta content="" name="description">
+    <link href="" rel="shortcut icon" type="image/x-icon"/>
+    <link href="" rel="shortcut icon" type="image/x-icon"/>
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link href="/static/css/base.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme_default.min.css" media="all" rel="stylesheet">
+    <link href="/static/css/theme.min.css" media="all" rel="stylesheet">
+    <style>
+    None
+    </style>
+    
+
+</head>
+
+<body class="site-theme">
+
+
+
+
+<div id="cookie-consent-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="alert alert-consent m-0" style="border-radius: 0px">
+                    <h4 class="alert-heading">None</h4>
+                    <p class="text-justify"></p>
+                    <p class="mb-0 text-justify">None</p>
+                    <div class="row justify-content-between m-2">
+                        <button class="btn btn-success"
+                                id="cookie-consent-agree">None
+                        </button>
+                        <span>&nbsp;</span>
+                        <button class="btn btn-danger"
+                                id="cookie-consent-reject">None
+                        </button>
+                        <span>&nbsp;</span>
+                        <a class="btn btn-warning ml-auto"
+                           href="None" id="cookie-consent-options">
+                            None
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var fn1 = function () {
+        document.cookie = "cookie_consent=true";
+        document.getElementById('cookie-consent-container').hidden = true;
+    };
+    document.getElementById('cookie-consent-agree').onclick = fn1;
+
+    var fn2 = function () {
+        document.cookie = "cookie_consent=false";
+        document.getElementById('cookie-consent-container').hidden = true;
+    };
+    document.getElementById('cookie-consent-reject').onclick = fn2;
+
+
+</script>
+
+
+
+<a class="skippy sr-only sr-only-focusable" href="#site_content">
+    <span class="skippy-text">Skip to content</span>
+</a>
+
+
+
+
+<header class="site-header">
+    
+    <nav class="navbar navbar-header navbar-expand-sm shadow">
+    <div class="container-fluid">
+        
+        
+        
+        
+        <a class="navbar-brand " href="/">
+            <i class="d-inline fa fa-brain"></i>
+            <b>XAM</b>
+        </a>
+        
+        <button class="navbar-toggler navbar-toggler-right border-0" data-target="#site_navbar" data-toggle="collapse"
+                type="button">
+            <span class="fa fa-bars fa-fw"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="site_navbar">
+            
+            
+            
+            <ul class="navbar-nav mr-auto">
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    
+                    <a class="nav-link w-100 "
+                       href="/" title="Home">
+                        <span class="fa fa-home"></span>
+                        <span class="d-inline">Home</span>
+                    </a>
+                    
+                </li>
+                
+                
+                
+            </ul>
+            
+            
+            <ul class="navbar-nav ml-auto">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="nav-item text-center">
+                    <a class="nav-link btn btn-secondary header-btn w-100 "
+                       href="/auth/login" title="Login">
+                        <span class="fa fa-sign-in"></span>
+                        <span class="d-sm-none d-md-inline">Login</span>
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item text-center">
+                    <a class="nav-link btn btn-primary header-btn w-100 "
+                       href="/auth/register" title="Register">
+                        <span class="fa fa-sign-up"></span>
+                        <span class="d-sm-none d-md-inline">Register</span>
+                    </a>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+</header>
+
+
+
+<main class="site-content" id="site_content" role="main">
+    
+    <section class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <br/>
+            
+            
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+</main>
+
+
+
+<footer class="site-footer" role="contentinfo">
+    
+    <div class="container-fluid py-4 navbar-footer">
+    
+    <div class="row">
+        <nav class="col-12">
+            
+            
+            <ul class="nav nav-pills nav-fill">
+                
+                
+            </ul>
+        </nav>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-sm-12 d-flex justify-content-between text-center">
+            <div class="mr-auto text-md-left m-2">
+                
+            </div>
+            <div class="ml-auto text-md-right m-2">
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <center>
+                <small>https://localhost licensed under </small>
+            </center>
+            <center>
+                <small>Client : 127.0.0.1, Language : </small>
+            </center>
+        </div>
+    </div>
+
+</div>
+    
+</footer>
+
+
+
+
+
+
+<script crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+None
+
+</script>
+
+
+
+</body>
+
+</html>
