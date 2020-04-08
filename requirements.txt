@@ -1,9 +1,0 @@
-Flask
-Frozen-Flask
-werkzeug
-wtforms
-itsdangerous
-docker
-requests
-jsonschema
-markdown

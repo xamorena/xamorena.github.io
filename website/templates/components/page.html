@@ -1,9 +1,0 @@
-{% if page.template is defined %}
-{% if page.template in ['teams', 'albums', 'articles', 'features', 'products', 'testimonials', 'card', 'cover'] %}
-{% set node = page %}
-{% set path = 'components/' + node.template + '.html' %}
-{% include path %}
-{% else %}
-{% include "components/content.html" %}
-{% endif %}
-{% endif %}
