@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{%- include cover.html -%}
+<div class="container py-5">
+    <div class="d-flex flex-row">
+        <div class="col-sm">
+            {{ content }}
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="col-sm">
+            {%- include drawer.html -%}
+        </div>
+    </div>
+</div>
