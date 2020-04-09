@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 author: "Xavier AMORENA"
-category: Article
+category: Articles
 tags: "GitHub Jekyll"
 ---
 

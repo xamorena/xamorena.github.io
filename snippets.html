@@ -6,11 +6,11 @@ author: Xavier AMORENA
 
 <h3>Snippets</h3>
 <div class="list-group">
-{% for item in site.data.snippets %}
+{% for item in site.snippets %}
     <div class="list-group-item">
         <h4>{{ item.title }}</h4>
         <p>{{ item.description }}</p>
-        <pre><code>{{item.source}}</code></pre>
+        <pre><code>{{item.content}}</code></pre>
         <a class="btn btn-default" href="#">
            Copy to clipboard
         </a>

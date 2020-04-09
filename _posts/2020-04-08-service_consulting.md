@@ -3,7 +3,7 @@ layout: post
 title:  Service Consulting
 description: Service Description
 author: Xavier.AMORENA
-category: Service
+category: Services
 tags: Python
 url: https://github.com/xamorena/project1
 ---

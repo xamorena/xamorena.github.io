@@ -1,14 +1,10 @@
 ---
-layout: post
-title:  Snippet
+title: Snippet 1
 description: Snippet Description
 author: Xavier.AMORENA
 category: Snippets
 tags: Python
 language: python
 ---
-
-# Snippet 1
-
-...
-
+def my_print(**kwargs):
+    print(*kwargs)
