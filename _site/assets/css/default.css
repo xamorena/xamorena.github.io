@@ -1,19 +1,24 @@
-header {
-    min-height: 56px;
-}
 header > .navbar,
 header > .navbar .nav-link {
-    background-color: var(--primary);
+    background-color: transparent !important;
     color: var(--white);
 }
 header > .navbar.scrolled,
 header > .navbar.scrolled .nav-link {
-    background-color: var(--light);
+    background-color: var(--light) !important;
     color: var(--dark);
     /*
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     */
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes zoom { 100% { -moz-transform: scale(2); } }
+@-webkit-keyframes zoom { 100% { -webkit-transform: scale(2); } }
+@keyframes zoom { 100% { -webkit-transform: scale(2); transform:scale(2); } }
 
 .page-content {
     min-height: 80vh !important;
@@ -22,7 +27,9 @@ header > .navbar.scrolled .nav-link {
     background-image: url(/assets/images/covers/home_cover.png);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
 }
 .fork-me,
 .ribbon {
