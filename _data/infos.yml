@@ -1,0 +1,9 @@
+- name: Terms
+  icon: fa fa-file
+  link: /terms.html
+- name: Privacy
+  icon: fa fa-key
+  link: /privacy.html
+- name: Licensed under Apache 2.0
+  icon: fa fa-key
+  link: /license.html

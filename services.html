@@ -1,0 +1,18 @@
+---
+layout: page
+title: Projects
+author: Xavier AMORENA
+---
+
+<h3>Services</h3>
+<div class="list-group">
+{% for service in site.data.services %}
+    <div class="list-group-item">
+        <h4>{{ service.title }}</h4>
+        <p>{{ service.description }}</p>
+        <a class="btn btn-primary" href="{{ service.url }}">
+            Open <span class="badge badge-info">{{project.type}}</span>
+        </a>
+    </div>
+{% endfor %}
+</div>

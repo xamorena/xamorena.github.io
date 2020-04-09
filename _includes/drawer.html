@@ -1,7 +1,47 @@
-<ul class="nav nav-pills flex-column">
-    {% for post in site.posts %}
-    <li class="nav-item">
-        <a class="nav-link" href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
+<nav class="py-2">
+    <div class="container">
+
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+                <a class="nav-link" name="pages">Related Pages</a>
+                <ul class="nav nav-pills flex-column">
+                    {% for doc in site.pages %}
+                    {% if doc.category == page.category %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ doc.url }}">{{ doc.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav nav-pills flex-column">
+            {% for category in site.categories %}
+            {% if category | first == page.category %}
+            <li class="nav-item">
+                <a class="nav-link" name="{{ category | first }}">Related {{ category | first }}</a>
+                <ul class="nav nav-pills flex-column">
+                    {% for post in category.last %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+                <a class="nav-link" name="pages">Posts</a>
+                <ul class="nav nav-pills flex-column">
+                {% for post in site.posts %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

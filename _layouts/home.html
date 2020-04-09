@@ -8,9 +8,18 @@ layout: default
             {{ content }}
         </div>
     </div>
-    <div class="d-flex flex-row">
-        <div class="col-sm">
-            {%- include drawer.html -%}
+    <div class="d-flex flex-row flex-wrap">
+        {% for category in site.categories %}
+        {% for post in category.last %}
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">{{ post.category }}</div>
+                <div class="card-body">
+                    <a class="btn btn-primary" href="{{ post.url }}">{{ post.title }}</a>
+                </div>
+            </div>
         </div>
+        {% endfor %}
+        {% endfor %}
     </div>
 </div>

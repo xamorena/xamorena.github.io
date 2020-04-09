@@ -1,0 +1,19 @@
+---
+layout: page
+title: Projects
+author: Xavier AMORENA
+---
+
+<h3>Snippets</h3>
+<div class="list-group">
+{% for item in site.data.snippets %}
+    <div class="list-group-item">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.description }}</p>
+        <pre><code>{{item.source}}</code></pre>
+        <a class="btn btn-default" href="#">
+           Copy to clipboard
+        </a>
+    </div>
+{% endfor %}
+</div>

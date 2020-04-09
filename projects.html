@@ -1,0 +1,20 @@
+---
+layout: page
+title: Projects
+author: Xavier AMORENA
+---
+
+<h3>Projects</h3>
+
+<div class="list-group">
+{% for project in site.data.projects %}
+    <div class="list-group-item">
+        <h4>{{ project.title }}</h4>
+        <p>{{ project.description }}</p>
+        <a class="btn btn-primary" href="{{ project.repository_url }}">
+            Open Repository
+            <span class="badge badge-info">{{project.language}}</span>
+        </a>
+    </div>
+{% endfor %}
+</div>

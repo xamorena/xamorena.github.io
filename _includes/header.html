@@ -1,26 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-  <div class="container">
-    <a class="navbar-brand" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-
-    {%- assign page_paths = site.header_pages -%}
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          </li>
-          {%- endif -%}
-        {% endfor -%}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.github.repository_url }}">Fork me on Github</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" rel="author" href="{{ '/' | relative_url }}">
+            <img class="img-fluid" src="{{ site.data.brand.image_url }}" alt="Brand" title="{{site.title}}">
+            {{ site.data.brand.title | escape }}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {%- for menu in site.data.navigation -%}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ menu.link | relative_url }}">
+                        <span class="{{ menu.icon | escape }}"></span>
+                        {{ menu.name | escape }}
+                    </a>
+                </li>
+                {% endfor -%}
+                <li class="nav-item">
+                    <span class="nav-link separator">&nbsp;</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fork-me" href="{{ site.github.repository_url }}">Fork me on Github</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>

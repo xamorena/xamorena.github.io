@@ -1,0 +1,8 @@
+- title: Snippet title 1
+  description: Just a short description
+  language: Python
+  source: |-
+    def my_function():
+      print("hello")
+
+  authors: Xavier AMORENA

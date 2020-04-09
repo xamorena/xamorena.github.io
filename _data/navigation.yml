@@ -1,0 +1,15 @@
+- name: Home
+  icon: fa fa-home
+  link: /
+- name: Services
+  icon: fa fa-cogs
+  link: /services.html
+- name: Projects
+  icon: fa fa-folder
+  link: /projects.html
+- name: Snippets
+  icon: fa fa-code
+  link: /snippets.html
+- name: About
+  icon: fa fa-question
+  link: /about.html

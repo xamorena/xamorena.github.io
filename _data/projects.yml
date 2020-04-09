@@ -1,0 +1,15 @@
+- title: Project title 1
+  description: Just a short description
+  language: Python
+  owners: Xavier AMORENA
+  repository_url: https://github.com/xamorena/project1
+- title: Project title 2
+  description: Just a short description
+  language: PHP
+  owners: Xavier AMORENA
+  repository_url: https://github.com/xamorena/project2
+- title: Project title 3
+  description: Just a short description
+  language: Java
+  owners: Xavier AMORENA
+  repository_url: https://github.com/xamorena/project3
